@@ -26,14 +26,21 @@ const datos = ({ edad, nombre, clave, rango = 'Asador' }) => {
 
     return {
         nombreClave: clave,
-        anies: edad
+        anies: edad,
+        latlng: {
+            lat: 14.125,
+            lng:-1523.5
+        }
     }
 
 }
 
 
-const {nombreClave, anies} = datos(persona);
+//Desestructuracion de objetos anidados
+const {nombreClave, anies, latlng:{lat, lng}} = datos(persona);
 
 console.log(nombreClave);
 console.log(anies);
+console.log(lat, lng);
+
 
