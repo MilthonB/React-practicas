@@ -3,17 +3,17 @@
 import heroes,{owner} from "../data/heroes";
 
 
-console.log(owner)
+// console.log(owner)
 
 
-const getHeroById = (id) =>  heroes.find( heroe => heroe.id === id);
+export const getHeroById = (id) =>  heroes.find( heroe => heroe.id === id);
 
 
-console.log(getHeroById(2));
+// console.log(getHeroById(2));
 
 
-const getHeroesByOwner = ( owner ) =>  heroes.filter( heroe => heroe.owner === owner);
+export const getHeroesByOwner = ( owner ) =>  heroes.filter( heroe => heroe.owner === owner);
 
 
 
-console.log(getHeroesByOwner('DC'));
+// console.log(getHeroesByOwner('DC'));
