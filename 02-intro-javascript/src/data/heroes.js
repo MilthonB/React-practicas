@@ -27,4 +27,13 @@ const heroes = [
     },
 ];
 
+//Importación mutiples primera manera
+export const owner = ['Marvel','DC'];
 export default heroes; //expor por ser lo unico
+
+//Importación mutiples segunda manera
+// const owner = ['Marvel','DC'];
+// export {
+//     heroes as default,
+//     owner
+// }
