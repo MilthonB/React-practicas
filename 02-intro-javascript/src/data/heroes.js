@@ -1,3 +1,4 @@
+// export const heroes = [ //aća también se puede export
 const heroes = [
     {
         id: 1,
@@ -25,3 +26,5 @@ const heroes = [
         owner: 'Marvel'
     },
 ];
+
+export default heroes; //expor por ser lo unico
