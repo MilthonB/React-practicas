@@ -6,18 +6,25 @@
 
 const getImgen = async () => {
 
-    const resp = await fetch('http://api.giphy.com/v1/gifs/random?api_key=FAojj336ohZpReqVhyVwVOHo1jWO94vB&limit=10');
+
+    try {
+
+        const resp = await fetch('http://api.giphy.com/v1/gifs/random?api_key=FAojj336ohZpReqVhyVwVOHo1jWO94vB&limit=10');
 
 
-    const { data } = await resp.json();
-    const { url } = data.images.original
+        const { data } = await resp.json();
+        const { url } = data.images.original
 
-    console.log(url)
+        console.log(url)
 
-    const img = document.createElement('img');
-    img.src = url;
+        const img = document.createElement('img');
+        img.src = url;
 
-    document.body.append(img);
+        document.body.append(img);
+
+    } catch (error) {
+        console.error('Manejo del error', error);
+    }
 
 
 
