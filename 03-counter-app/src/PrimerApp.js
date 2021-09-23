@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 //Fcuntional component
 
 
-const PrimeraApp = ( {saludo = "hola mundo"} ) => {
+const PrimeraApp = ( {saludo, subtitulo } ) => {
 
     //Si alguien quiere usar este componente tiene que mandarme
     // los props
@@ -27,7 +27,7 @@ const PrimeraApp = ( {saludo = "hola mundo"} ) => {
         <>
             <pre> { saludo } </pre>
             {/* <h1> { saludo2 } </h1> */}
-            <p>Mi primera aplicacion</p>
+            <p> { subtitulo } </p>
         </>
     );
 
@@ -36,6 +36,11 @@ const PrimeraApp = ( {saludo = "hola mundo"} ) => {
 
 PrimeraApp.propTypes  = {
     saludo: PropTypes.string.isRequired
+}
+
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Soy un subtitulo'
 }
 
 export default PrimeraApp;
