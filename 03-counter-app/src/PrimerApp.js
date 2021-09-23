@@ -1,5 +1,7 @@
 
-// import React from 'react';
+import React from 'react';
+
+import PropTypes from 'prop-types';
 
 
 //Exiten dos tipos de componentes 
@@ -7,8 +9,11 @@
 
 //Fcuntional component
 
+
 const PrimeraApp = ( {saludo = "hola mundo"} ) => {
 
+    //Si alguien quiere usar este componente tiene que mandarme
+    // los props
     // const saludo = {
     //     nombre: 'lore',
     //     edad:45
@@ -26,6 +31,11 @@ const PrimeraApp = ( {saludo = "hola mundo"} ) => {
         </>
     );
 
+    
+}
+
+PrimeraApp.propTypes  = {
+    saludo: PropTypes.string.isRequired
 }
 
 export default PrimeraApp;
