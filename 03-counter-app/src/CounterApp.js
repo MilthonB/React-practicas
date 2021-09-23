@@ -17,6 +17,12 @@ const CounterApp = ({ value }) => {
             <button onClick={ () => setCount( count+1) } >
                 + 1
             </button>
+            <button onClick={ () => setCount( count*0) } >
+                Reset
+            </button>
+            <button onClick={ () => setCount( count-1) } >
+                - 1
+            </button>
         </>
     );
 
