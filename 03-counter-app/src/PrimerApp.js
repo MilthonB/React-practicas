@@ -9,10 +9,17 @@
 
 const PrimeraApp = () => {
 
+    const saludo = {
+        nombre: 'lore',
+        edad:45
+    }
+
+    const saludo2 = 'Hola mundo';
 
     return (
         <>
-            <h1>Hola mundo</h1>
+            <pre> { JSON.stringify(saludo,null,3) } </pre>
+            <h1> { saludo2 } </h1>
             <p>Mi primera aplicacion</p>
         </>
     );
