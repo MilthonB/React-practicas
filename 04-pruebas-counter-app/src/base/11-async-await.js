@@ -4,7 +4,7 @@
 
 
 
-const getImgen = async () => {
+export const getImgen = async () => {
 
 
     try {
@@ -15,15 +15,11 @@ const getImgen = async () => {
         const { data } = await resp.json();
         const { url } = data.images.original
 
-        console.log(url)
-
-        const img = document.createElement('img');
-        img.src = url;
-
-        document.body.append(img);
-
+        return url;
+       
     } catch (error) {
         console.error('Manejo del error', error);
+        return 'No hay';
     }
 
 
