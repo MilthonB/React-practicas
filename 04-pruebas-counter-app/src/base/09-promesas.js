@@ -1,6 +1,6 @@
 
 
-import { getHeroById } from "./base/08-imp-exp";
+import { getHeroById } from "./08-imp-exp";
 
 
 //Promesas js 
@@ -9,7 +9,7 @@ import { getHeroById } from "./base/08-imp-exp";
 //Las promesas se ejecutan con un callback
 //resolve = la promesa se resolvio 
 //reject = ocrrio un error 
-const promesa = new Promise( (resolve, reject ) => {
+export const promesa = new Promise( (resolve, reject ) => {
 
     setTimeout(() => {
         // console.log('2 segundos después')
@@ -17,7 +17,7 @@ const promesa = new Promise( (resolve, reject ) => {
         const heroe = getHeroById(2);
         resolve(heroe)
         // reject('No se puede encontrar el heroe')
-    }, 2000);
+    }, 1500);
 
 });
 
@@ -30,7 +30,7 @@ const promesa = new Promise( (resolve, reject ) => {
 
 
 
-const getHeroeByIdAsync = ( id ) => {
+export const getHeroeByIdAsync = ( id ) => {
 
     return new Promise( (resolve, reject ) => {
 
@@ -46,7 +46,7 @@ const getHeroeByIdAsync = ( id ) => {
 
             // }
             // reject('No se puede encontrar el heroe')
-        }, 2000);
+        }, 1500);
     
     });
 }
@@ -57,6 +57,6 @@ const getHeroeByIdAsync = ( id ) => {
 
 
 //Simplificacion 
-getHeroeByIdAsync(4)
-.then( console.log )
-.catch( console.log );
+// getHeroeByIdAsync(4)
+// .then( console.log )
+// .catch( console.log );
