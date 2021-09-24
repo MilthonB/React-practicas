@@ -8,18 +8,13 @@ const [ , p2 ] = personajes;
 const [ , , p3 ] = personajes;
 
 
-console.log(p1);
-console.log(p2);
-console.log(p3);
-
-const retornaArreglo = () => {
+export const retornaArreglo = () => {
     return ['ABC',123];
 }
 
 
 const [ letras,numeros ] = retornaArreglo();
 
-console.log(letras,numeros);
 
 const usStates = (valor) => {
     return[valor, ()=> {console.log('Hola Mundo')}];
@@ -27,5 +22,4 @@ const usStates = (valor) => {
 
 const [nombre, funcion] = usStates('goku');
 
-console.log(nombre);
 funcion();
