@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { AddCategoria } from "../src/components/AddCategoria";
+import { GifGrid } from "./components/GifGrid";
 
 
 export const GifExpertApp = () => {
 
 
-    const [categorias, setCategorias] = useState(['DBZ', 'Pokemon', 'Gladiadores']);
+    const [categorias, setCategorias] = useState(['DBZ']);
 
     // const handleAdd = () => {
 
@@ -24,9 +25,12 @@ export const GifExpertApp = () => {
 
             <ol>
                 {
-                    categorias.map(category => {
-                        return <li key={category} > {category} </li>
-                    })
+                    categorias.map(category =>
+                        <GifGrid
+                            key={category}
+                            category={category}
+                        />
+                    )
                 }
             </ol>
 
