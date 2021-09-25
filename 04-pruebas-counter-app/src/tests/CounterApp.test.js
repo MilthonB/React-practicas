@@ -49,7 +49,7 @@ describe('Pruebas a CounterApp.js', () => {
 
 
     test('debe de decrementar con el boton -1', () => {
-
+ 
         const btn = wrapper.find('button').at(2).simulate('click');
         const counter = wrapper.find('h2').text().trim();
 
