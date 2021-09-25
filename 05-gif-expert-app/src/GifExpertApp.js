@@ -16,7 +16,7 @@ export const GifExpertApp = () => {
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategoria />
+            <AddCategoria setCategorias={setCategorias} />
             <hr />
 
             {/* <button onClick={handleAdd} >Agregar</button> */}
