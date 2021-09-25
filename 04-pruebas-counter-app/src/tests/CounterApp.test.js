@@ -58,5 +58,23 @@ describe('Pruebas a CounterApp.js', () => {
 
     });
 
+    test('debe de reseter el valor mandado ', () => {
+        
+        
+        const wrapper = shallow( <CounterApp value={105} /> );
+
+        wrapper.find('button').at(0).simulate('click');
+        wrapper.find('button').at(0).simulate('click');
+        wrapper.find('button').at(1).simulate('click');
+
+        const textCounter = wrapper.find('h2').text().trim();
+
+         expect( textCounter ).toBe('105')
+
+
+
+    });
+    
+
 
 });
