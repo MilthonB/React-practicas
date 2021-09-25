@@ -27,7 +27,7 @@ const PrimeraApp = ( {saludo, subtitulo } ) => {
         <>
             <pre> { saludo } </pre>
             {/* <h1> { saludo2 } </h1> */}
-            <p> { subtitulo } </p>
+            <p>{subtitulo}</p>
         </>
     );
 
